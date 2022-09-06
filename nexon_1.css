@@ -58,7 +58,7 @@ header .gnb a {
     display: block;
     outline: none;
 }
-header .ham {}
+
 header .ham span {
     display: flex;
     width: 30px;
