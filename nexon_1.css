@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+body {
+    max-width: 400px;
+    width: 400px;
+    margin: auto;
+    border: 1px solid gray;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.menu_text {
+    text-align: center;
+    color: #184790;
+    font-size: 1.2rem;
+    padding-bottom: 16px;
+}
+
+/* 헤더 시작 */
+
+header {
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+header .logo {
+    width: 150px;
+}
+header .logo img {
+    width: 100%;
+}
+header .login {
+    font-size: 0.8rem;
+    margin-left: 80px;
+}
+header .gnb {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #eee;
+    padding-top: 100px;
+}
+header .gnb a {
+    padding : 1rem;
+    display: block;
+    outline: none;
+}
+header .ham {}
+header .ham span {
+    display: flex;
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: black;
+}
+
+/* 헤더 끝 */
+
+/* 슬라이드 부분 */
+
+.sec1 {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+}
+
+.sec1 .slide {
+    display: flex;
+    width: 600%;
+}
+
+.sec1 .slide_bt {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-45px);
+}   
+
+.slide_bt span {
+    position: absolute;
+    margin: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+.slide_bt span:first-of-type{ background-color: #36b0f0;}
+.slide_bt .dot1{left: 0;}
+.slide_bt .dot2{left: 15px;}
+.slide_bt .dot3{left: 30px;}
+.slide_bt .dot4{left: 45px;}
+.slide_bt .dot5{left: 60px;}
+.slide_bt .dot6{left: 75px;}
+
+.sec1 .slide>img {
+    width: calc(100% / 6);
+}
+/* 슬라이드 끝 */
+
+/* 신규/추천게임 보기 */
+
+.sec2 {
+    position: relative;
+    margin-top: 10px;
+    height: 250px;
+}
+
+.sec2 .tab_list  {
+    display: flex;
+    justify-content: space-evenly;
+    color: #36b0f0;
+    margin: 5px;
+}
+
+.sec2 .tab_list li,
+.tab_list2 li,
+.sec2 .list li {
+    cursor: pointer;
+}
+
+.sec2 li.on {
+    font-weight: bold;
+}
+
+.sec2 .game_con.on {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    top: 60px;
+    overflow: hidden;
+    display: block;
+}
+.sec2 .game_con {
+    display: none;
+}
+
+.sec2 .list {
+    display: flex; 
+    justify-content: center;
+}
+
+
+.sec2 img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* 신규/추천게임 끝 */
+
+/* 전체게임 보기 */
+
+.sec3 {
+    border-top: 3px solid #eaeaea;
+    margin: 20px;
+    border-top-style: calc(100% - 20px);
+    height: 520px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.sec3 .tab_list2 {
+    display: flex;
+    justify-content: space-evenly;
+    color: #36b0f0;
+}
+
+.sec3 .tab_list2 li.on {
+    font-weight: bold;
+}
+
+.sec3 h2 {
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.sec3 .game_con2.on{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 100px;
+    overflow: hidden;
+    display: block;
+}
+.sec3 .game_con2 {
+    display: none;
+}
+
+.sec3 .list2 {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sec3 .list2 li {
+    width: 30%;
+    padding: 10px;
+}
+
+.sec3 .list2 span {
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    font-size: 14px;
+}
+
+.sec3 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* sec3 끝 */
+
+/* sec4 시작 */
+.sec4 {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 5px 10px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.sec4 h2 {
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.notice {
+    padding: 5px;
+    font-size: 0.8rem;
+}
+.sec4 .sns {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+}
+
+.sec4 .sns img {
+    width: 80%;
+}
